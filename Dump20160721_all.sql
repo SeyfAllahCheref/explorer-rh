@@ -31,7 +31,10 @@ CREATE TABLE `candidat` (
   `niveau` varchar(45) DEFAULT NULL,
   `poste` varchar(45) DEFAULT NULL,
   `statut` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idcandidat`)
+  `interview` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idcandidat`),
+  KEY `interview_fk_idx` (`interview`),
+  CONSTRAINT `interview_fk` FOREIGN KEY (`interview`) REFERENCES `interview` (`idinterview`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -101,7 +104,7 @@ CREATE TABLE `holiday` (
   PRIMARY KEY (`id_holiday`),
   KEY `FK_jc8fk5xuxcu87r8apyp6851yr` (`employee`),
   CONSTRAINT `FK_jc8fk5xuxcu87r8apyp6851yr` FOREIGN KEY (`employee`) REFERENCES `employee` (`idemployee`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -110,7 +113,7 @@ CREATE TABLE `holiday` (
 
 LOCK TABLES `holiday` WRITE;
 /*!40000 ALTER TABLE `holiday` DISABLE KEYS */;
-INSERT INTO `holiday` VALUES (1,NULL,NULL,1,'holiday','vvccv',NULL),(2,NULL,NULL,1,'holiday','ggghgh',NULL),(3,NULL,NULL,1,'holiday','kjhgfd',NULL),(4,'0030-11-06','0017-11-06',1,'holiday','xssxsx',NULL),(5,'2016-05-23','2016-05-18',1,'holiday','xxxx',NULL),(6,'2016-06-14','2016-06-07',1,'holiday','Test',NULL);
+INSERT INTO `holiday` VALUES (1,NULL,NULL,1,'holiday','vvccv',NULL),(2,NULL,NULL,1,'holiday','ggghgh',NULL),(3,NULL,NULL,1,'holiday','kjhgfd',NULL),(4,'0030-11-06','0017-11-06',1,'holiday','xssxsx',NULL),(5,'2016-05-23','2016-05-18',1,'holiday','xxxx',NULL),(6,'2016-06-14','2016-06-07',1,'holiday','Test',NULL),(7,'2016-07-27','2016-07-22',1,'holiday','Congé 21',NULL);
 /*!40000 ALTER TABLE `holiday` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -301,4 +304,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-21 16:51:30
+-- Dump completed on 2016-07-22 12:24:41
