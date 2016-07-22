@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/controllers/DashboardController.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Candidat.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Employee.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Holiday.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Interview.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Login.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Message.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Tasks.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Ticket.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/EmployeeRepository.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/TasksRepository.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/services/EmployeeService.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/services/Role.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/services/TasksService.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/css" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/images" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/plugins" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/plugins/datepicker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/plugins/daterangepicker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/plugins/timepicker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/403.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" charset="windows-1252" />
+  </component>
+</project>
