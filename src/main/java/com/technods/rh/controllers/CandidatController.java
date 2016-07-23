@@ -58,6 +58,19 @@ public class CandidatController {
     }
         }
 
+    /**
+     *
+     * @param name
+     * @param firstname
+     * @param cv
+     * @param photo
+     * @param post
+     * @param statut
+     * @param candidat
+     * @param principal
+     * @param result
+     * @return
+     */
 
     @RequestMapping(value = "/addCandidat", method = RequestMethod.POST)
     public String addCandidat(@RequestParam("name") String

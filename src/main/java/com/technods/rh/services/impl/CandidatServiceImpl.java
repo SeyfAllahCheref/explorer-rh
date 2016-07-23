@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by TECHNO on 11/05/2016.
+ * Created   on 22/07/2016.
  */
 @Service
 public class CandidatServiceImpl implements CandidatService{
