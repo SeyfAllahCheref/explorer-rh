@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Candidat implements java.io.Serializable {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private int idcandidat;
@@ -35,8 +35,8 @@ public class Candidat implements java.io.Serializable {
 	}
 
 	public Candidat(int idcandidat, String name, String firstName, byte[] cv,
-			byte[] photo, String niveau, String poste, String statut,
-			Interview interview) {
+					byte[] photo, String niveau, String poste, String statut,
+					Interview interview) {
 		this.idcandidat = idcandidat;
 		this.name = name;
 		this.firstName = firstName;

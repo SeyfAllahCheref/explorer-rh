@@ -401,6 +401,20 @@
                      <span class="label label-danger">4</span>
                 </a>
             </li>
+            
+            <li class="panel">
+                <a href="/candidat" data-parent="#menu" data-toggle="collapse"
+                   class="" data-target="#chart-nav">
+                    <i class="icon-bar-chart"></i> Candidat
+	   
+                        <span class="pull-right">
+                            <i class="icon-angle-left"></i>
+                        </span>
+                     <span class="label label-danger">5</span>
+                </a>
+            </li>
+            
+            
             <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>
 
         </ul>

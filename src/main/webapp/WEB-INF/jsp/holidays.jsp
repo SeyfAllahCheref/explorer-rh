@@ -1,16 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-
-<!-- BEGIN HEAD -->
+<html>
 <head>
     <meta charset="UTF-8" />
     <title>Explorer RH | Holidays </title>
@@ -36,9 +33,8 @@
     <link rel="stylesheet" href="plugins/datepicker/css/datepicker.css" />
     <link rel="stylesheet" href="plugins/timepicker/css/bootstrap-timepicker.min.css" />
 
+    <title>Add Candidat</title>
 </head>
-<!-- END HEAD -->
-
 <!-- BEGIN BODY -->
 <body class="padTop53 " >
 
@@ -74,7 +70,7 @@
                             <a href="#">
                                 <div>
                                     <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>Today</em>
                                         </span>
                                 </div>
@@ -90,7 +86,7 @@
                             <a href="#">
                                 <div>
                                     <strong>Raphel Jonson</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>Yesterday</em>
                                         </span>
                                 </div>
@@ -105,7 +101,7 @@
                             <a href="#">
                                 <div>
                                     <strong>Chi Ley Suk</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>26 Jan 2014</em>
                                         </span>
                                 </div>
@@ -334,7 +330,7 @@
             <li class="panel ">
                 <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
                     <i class="icon-tasks"> </i> Tasks
-	                    <span class="pull-right">
+                    <span class="pull-right">
                           <i class="icon-angle-left"></i>
                         </span>
                     <span class="label label-default">10</span>
@@ -348,8 +344,8 @@
             <li class="panel ">
                 <a href="#" data-parent="#menu" data-toggle="collapse" class="collapsed" data-target="#form-nav">
                     <i class="icon-pencil"></i> Messages
-	   
-                        <span class="pull-right">
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
                     <span class="label label-success">5</span>
@@ -359,8 +355,8 @@
             <li class="panel">
                 <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#pagesr-nav">
                     <i class="icon-table"></i> Tickets
-	   
-                        <span class="pull-right">
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
                     <span class="label label-info">6</span>
@@ -375,20 +371,33 @@
                 <a href="/holidays" data-parent="#menu" data-toggle="collapse"
                    class="" data-target="#chart-nav">
                     <i class="icon-bar-chart"></i> Requests
-	   
-                        <span class="pull-right">
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
                     <span class="label label-danger">4</span>
                 </a>
             </li>
+
+            <li class="panel">
+                <a href="/candidat" data-parent="#menu" data-toggle="collapse"
+                   class="" data-target="#chart-nav">
+                    <i class="icon-bar-chart"></i> Candidat
+
+                    <span class="pull-right">
+                            <i class="icon-angle-left"></i>
+                        </span>
+                    <span class="label label-danger">5</span>
+                </a>
+            </li>
+
+
             <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>
 
         </ul>
 
     </div>
     <!--END MENU SECTION -->
-
     <!--PAGE CONTENT -->
     <div id="content">
 

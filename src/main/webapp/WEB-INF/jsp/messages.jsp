@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: TECHNO
-  Date: 06/05/2016
-  Time: 21:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -14,11 +7,10 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-
-<!-- BEGIN HEAD -->
+<html>
 <head>
     <meta charset="UTF-8" />
-    <title>RH-EXPLORER | Messages</title>
+    <title>Explorer RH | Holidays </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -33,17 +25,16 @@
     <link rel="stylesheet" href="css/MoneAdmin.css" />
     <link rel="stylesheet" href="plugins/Font-Awesome/css/font-awesome.css" />
     <!--END GLOBAL STYLES -->
-
-    <!-- PAGE LEVEL STYLES -->
-    <link href="plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-    <!-- END PAGE LEVEL  STYLES -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="plugins/datepicker/css/datepicker.css" />
+    <link rel="stylesheet" href="plugins/timepicker/css/bootstrap-timepicker.min.css" />
+
+    <title>Add Candidat</title>
 </head>
-<!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body class="padTop53 " >
 
@@ -62,7 +53,8 @@
             <header class="navbar-header">
 
                 <a href="/" class="navbar-brand">
-                    <img  height="50" width="200" src="images/logo.png" alt="" /></a>
+                    <img height="50" width="200" src="images/logo.png"alt="" />
+                </a>
             </header>
             <!-- END LOGO SECTION -->
             <ul class="nav navbar-top-links navbar-right">
@@ -78,7 +70,7 @@
                             <a href="#">
                                 <div>
                                     <strong>John Smith</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>Today</em>
                                         </span>
                                 </div>
@@ -94,7 +86,7 @@
                             <a href="#">
                                 <div>
                                     <strong>Raphel Jonson</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>Yesterday</em>
                                         </span>
                                 </div>
@@ -109,7 +101,7 @@
                             <a href="#">
                                 <div>
                                     <strong>Chi Ley Suk</strong>
-                                        <span class="pull-right text-muted">
+                                    <span class="pull-right text-muted">
                                             <em>26 Jan 2014</em>
                                         </span>
                                 </div>
@@ -306,15 +298,19 @@
 
 
     <!-- MENU SECTION -->
-    <div id="left">
+    <div id="left" >
         <div class="media user-media well-small">
             <a class="user-link" href="#">
                 <img class="media-object img-thumbnail user-img"
-                     alt="User Picture" src="images/user.gif" />
+                     alt="User Picture" src="images/user.gif"
+                     src="images/user.gif"/>
             </a>
             <br />
             <div class="media-body">
-                <h5 class="media-heading"> ${employee.name} ${employee.lastName}</h5>
+                <h5 class="media-heading">
+                    <span>${employee.name}</span>
+                    <span>${employee.lastName}</span>
+                </h5>
                 <ul class="list-unstyled user-info">
 
                     <li>
@@ -328,230 +324,80 @@
         </div>
 
         <ul id="menu" class="collapse">
-
-
-            <li class="panel">
-                <a href="index.html" >
-                    <i class="icon-table"></i> Dashboard
-
-
-                </a>
+            <li class="panel active">
+                <a href="index.html" ><i class="icon-table"></i> Dashboard</a>
             </li>
-
-
-
             <li class="panel ">
                 <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
-                    <i class="icon-tasks"> </i> UI Elements     
-	   
-                        <span class="pull-right">
+                    <i class="icon-tasks"> </i> Tasks
+                    <span class="pull-right">
                           <i class="icon-angle-left"></i>
                         </span>
-                    &nbsp; <span class="label label-default">10</span>&nbsp;
+                    <span class="label label-default">10</span>
                 </a>
                 <ul class="collapse" id="component-nav">
 
-                    <li class=""><a href="button.html"><i class="icon-angle-right"></i> Buttons </a></li>
-                    <li class=""><a href="icon.html"><i class="icon-angle-right"></i> Icons </a></li>
-                    <li class=""><a href="progress.html"><i class="icon-angle-right"></i> Progress </a></li>
-                    <li class=""><a href="tabs_panels.html"><i class="icon-angle-right"></i> Tabs & Panels </a></li>
-                    <li class=""><a href="notifications.html"><i class="icon-angle-right"></i> Notification </a></li>
-                    <li class=""><a href="more_notifications.html"><i class="icon-angle-right"></i> More Notification </a></li>
-                    <li class=""><a href="modals.html"><i class="icon-angle-right"></i> Modals </a></li>
-                    <li class=""><a href="wizard.html"><i class="icon-angle-right"></i> Wizard </a></li>
-                    <li class=""><a href="sliders.html"><i class="icon-angle-right"></i> Sliders </a></li>
-                    <li class=""><a href="typography.html"><i class="icon-angle-right"></i> Typography </a></li>
+                    <li class=""><a href="button.html"><i class="icon-angle-right"></i> Done </a></li>
+                    <li class=""><a href="icon.html"><i class="icon-angle-right"></i> Waiting </a></li>
                 </ul>
             </li>
             <li class="panel ">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#form-nav">
-                    <i class="icon-pencil"></i> Forms
-	   
-                        <span class="pull-right">
+                <a href="#" data-parent="#menu" data-toggle="collapse" class="collapsed" data-target="#form-nav">
+                    <i class="icon-pencil"></i> Messages
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
-                    &nbsp; <span class="label label-success">5</span>&nbsp;
+                    <span class="label label-success">5</span>
                 </a>
-                <ul class="collapse" id="form-nav">
-                    <li class=""><a href="forms_general.html"><i class="icon-angle-right"></i> General </a></li>
-                    <li class=""><a href="forms_advance.html"><i class="icon-angle-right"></i> Advance </a></li>
-                    <li class=""><a href="forms_validation.html"><i class="icon-angle-right"></i> Validation </a></li>
-                    <li class=""><a href="forms_fileupload.html"><i class="icon-angle-right"></i> FileUpload </a></li>
-                    <li class=""><a href="forms_editors.html"><i class="icon-angle-right"></i> WYSIWYG / Editor </a></li>
-                </ul>
             </li>
 
             <li class="panel">
                 <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#pagesr-nav">
-                    <i class="icon-table"></i> Pages
-	   
-                        <span class="pull-right">
+                    <i class="icon-table"></i> Tickets
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
-                    &nbsp; <span class="label label-info">6</span>&nbsp;
+                    <span class="label label-info">6</span>
                 </a>
                 <ul class="collapse" id="pagesr-nav">
-                    <li><a href="pages_calendar.html"><i class="icon-angle-right"></i> Calendar </a></li>
-                    <li><a href="pages_timeline.html"><i class="icon-angle-right"></i> Timeline </a></li>
-                    <li><a href="pages_social.html"><i class="icon-angle-right"></i> Social </a></li>
-                    <li><a href="pages_pricing.html"><i class="icon-angle-right"></i> Pricing </a></li>
-                    <li><a href="pages_offline.html"><i class="icon-angle-right"></i> Offline </a></li>
-                    <li><a href="pages_uc.html"><i class="icon-angle-right"></i> Under Construction </a></li>
+                    <li class=""><a href="button.html"><i class="icon-angle-right"></i> In progress </a></li>
+                    <li class=""><a href="icon.html"><i class="icon-angle-right"></i> Closed </a></li>
+                    <li class=""><a href="progress.html"><i class="icon-angle-right"></i> Refused </a></li>
                 </ul>
             </li>
             <li class="panel">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#chart-nav">
-                    <i class="icon-bar-chart"></i> Charts
-	   
-                        <span class="pull-right">
+                <a href="/holidays" data-parent="#menu" data-toggle="collapse"
+                   class="" data-target="#chart-nav">
+                    <i class="icon-bar-chart"></i> Requests
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
-                    &nbsp; <span class="label label-danger">4</span>&nbsp;
+                    <span class="label label-danger">4</span>
                 </a>
-                <ul class="collapse" id="chart-nav">
-
-
-
-                    <li><a href="charts_line.html"><i class="icon-angle-right"></i> Line Charts </a></li>
-                    <li><a href="charts_bar.html"><i class="icon-angle-right"></i> Bar Charts</a></li>
-                    <li><a href="charts_pie.html"><i class="icon-angle-right"></i> Pie Charts </a></li>
-                    <li><a href="charts_other.html"><i class="icon-angle-right"></i> other Charts </a></li>
-                </ul>
             </li>
 
             <li class="panel">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#DDL-nav">
-                    <i class=" icon-sitemap"></i> 3 Level Menu
-	   
-                        <span class="pull-right">
+                <a href="/candidat" data-parent="#menu" data-toggle="collapse"
+                   class="" data-target="#chart-nav">
+                    <i class="icon-bar-chart"></i> Candidat
+
+                    <span class="pull-right">
                             <i class="icon-angle-left"></i>
                         </span>
+                    <span class="label label-danger">5</span>
                 </a>
-                <ul class="collapse" id="DDL-nav">
-                    <li>
-                        <a href="#" data-parent="#DDL-nav" data-toggle="collapse" class="accordion-toggle" data-target="#DDL1-nav">
-                            <i class="icon-sitemap"></i>&nbsp; Demo Link 1
-	   
-                        <span class="pull-right" style="margin-right: 20px;">
-                            <i class="icon-angle-left"></i>
-                        </span>
-
-
-                        </a>
-                        <ul class="collapse" id="DDL1-nav">
-                            <li>
-                                <a href="#"><i class="icon-angle-right"></i> Demo Link 1 </a>
-
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon-angle-right"></i> Demo Link 2 </a></li>
-                            <li>
-                                <a href="#"><i class="icon-angle-right"></i> Demo Link 3 </a></li>
-
-                        </ul>
-
-                    </li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 2 </a></li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 3 </a></li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 4 </a></li>
-                </ul>
-            </li>
-            <li class="panel">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#DDL4-nav">
-                    <i class=" icon-folder-open-alt"></i> 4 Level Menu
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                </a>
-                <ul class="collapse" id="DDL4-nav">
-                    <li>
-                        <a href="#" data-parent="DDL4-nav" data-toggle="collapse" class="accordion-toggle" data-target="#DDL4_1-nav">
-                            <i class="icon-sitemap"></i>&nbsp; Demo Link 1
-	   
-                        <span class="pull-right" style="margin-right: 20px;">
-                            <i class="icon-angle-left"></i>
-                        </span>
-
-
-                        </a>
-                        <ul class="collapse" id="DDL4_1-nav">
-                            <li>
-
-                                <a href="#" data-parent="#DDL4_1-nav" data-toggle="collapse" class="accordion-toggle" data-target="#DDL4_2-nav">
-                                    <i class="icon-sitemap"></i>&nbsp; Demo Link 1
-	   
-                        <span class="pull-right" style="margin-right: 20px;">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                                </a>
-                                <ul class="collapse" id="DDL4_2-nav">
-
-
-
-                                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 1 </a></li>
-                                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 2 </a></li>
-                                </ul>
-
-
-
-                            </li>
-                            <li><a href="#"><i class="icon-angle-right"></i> Demo Link 2 </a></li>
-                            <li><a href="#"><i class="icon-angle-right"></i> Demo Link 3 </a></li>
-                        </ul>
-
-                    </li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 2 </a></li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 3 </a></li>
-                    <li><a href="#"><i class="icon-angle-right"></i> Demo Link 4 </a></li>
-                </ul>
-            </li>
-            <li class="panel">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#error-nav">
-                    <i class="icon-warning-sign"></i> Error Pages
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                    &nbsp; <span class="label label-warning">5</span>&nbsp;
-                </a>
-                <ul class="collapse" id="error-nav">
-                    <li><a href="errors_403.html"><i class="icon-angle-right"></i> Error 403  </a></li>
-                    <li><a href="errors_404.html"><i class="icon-angle-right"></i> Error 404  </a></li>
-                    <li><a href="errors_405.html"><i class="icon-angle-right"></i> Error 405  </a></li>
-                    <li><a href="errors_500.html"><i class="icon-angle-right"></i> Error 500  </a></li>
-                    <li><a href="errors_503.html"><i class="icon-angle-right"></i> Error 503  </a></li>
-                </ul>
             </li>
 
 
-            <li><a href="gallery.html"><i class="icon-film"></i> Image Gallery </a></li>
-            <li class="panel active"><a href="tables.html"><i class="icon-table"></i> ${timeNow}</a></li>
-            <li><a href="maps.html"><i class="icon-map-marker"></i> Maps </a></li>
-
-            <li><a href="grid.html"><i class="icon-columns"></i> Grid </a></li>
-            <li class="panel">
-                <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#blank-nav">
-                    <i class="icon-check-empty"></i> Blank Pages
-	   
-                        <span class="pull-right">
-                            <i class="icon-angle-left"></i>
-                        </span>
-                    &nbsp; <span class="label label-success">2</span>&nbsp;
-                </a>
-                <ul class="collapse" id="blank-nav">
-
-                    <li><a href="blank.html"><i class="icon-angle-right"></i> Blank Page One  </a></li>
-                    <li><a href="blank2.html"><i class="icon-angle-right"></i> Blank Page Two  </a></li>
-                </ul>
-            </li>
             <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>
 
         </ul>
 
     </div>
     <!--END MENU SECTION -->
-
 
     <!--PAGE CONTENT -->
     <div id="content">
