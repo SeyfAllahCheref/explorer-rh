@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0803b61-db9b-4e72-9565-79c4be55546a" name="Default" comment="View file for the candidat.adding candidat.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/RH_EXPLORE_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/RH_EXPLORE_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/controllers/CandidatController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/CandidatRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Candidat.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/Candidat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/EmployeeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/HolidayRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/HolidayRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/MessageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/MessageRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/TasksRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/TasksRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/TicketRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/entities/repositories/TicketRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/EmployeeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/EmployeeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/HolidaysServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/HolidaysServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/MessageServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/TasksServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/TasksServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/TicketServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/technods/rh/services/impl/TicketServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/candidat.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/candidat.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/holidays.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/holidays.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/messages.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/messages.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tickets.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/tickets.jsp" />
     </list>
     <ignored path="SpringSecuritySpringDataJpaApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1178,7 +1157,7 @@
       <workItem from="1465037339023" duration="5038000" />
       <workItem from="1469092931554" duration="8219000" />
       <workItem from="1469286778361" duration="5164000" />
-      <workItem from="1469293673171" duration="757000" />
+      <workItem from="1469293673171" duration="953000" />
     </task>
     <task id="LOCAL-00001" summary="View file for the candidat.adding candidat.">
       <created>1469287345958</created>
@@ -1187,11 +1166,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469287345959</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="View file for the candidat.adding candidat.">
+      <created>1469294475259</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1469294475259</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154754000" />
+    <option name="totallyTimeSpent" value="154950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1611,6 +1597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
