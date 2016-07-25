@@ -403,8 +403,21 @@
 <div class="modal-body" style="padding:40px 50px;">
                 <form:form  modelAttribute="candidat" commandName="candidat"
                             action="/addCandidat"  method="POST">
-                            
-                            
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Add Candidat
+                                </div>
+
+
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-lg-8">
                    
                     <div class="form-inline">
                         <div class="form-group">
@@ -481,20 +494,32 @@
                        <label for="statut">
                             <!--  <span class="glyphicon glyphicon-user"></span> -->Statut: 
                         </label>
-                        <input name="statut" type="text"
+                        <textarea name="cv" type="text"
                                     class="form-control"
                                     id="statut"
-                                    placeholder="Enter cv"
-                                    required="required"/>
-                                    
+                                    placeholder="Enter status"
+                                    required="required"
+                                    rows="8">
+                        </textarea>
+
+
                                     </div>
+                         <!-- Add interview attributes-->
                                     </div>
+                                            <p></p>
+                                            <p></p>
                                      <button type="submit"
                             class="btn btn-primary"><span
                             class="glyphicon glyphicon-send"></span> add
                     </button>
                            </form:form>
                     </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
 
 </div>
 <!-- End Page Content -->
