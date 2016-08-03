@@ -1,17 +1,12 @@
-
-
 package com.technods.rh.controllers;
-
 
 import com.technods.rh.entities.Candidat;
 import com.technods.rh.entities.Employee;
-import com.technods.rh.entities.Message;
-import com.technods.rh.entities.Tasks;
+import com.technods.rh.entities.Interview;
 import com.technods.rh.services.CandidatService;
 import com.technods.rh.services.EmployeeService;
-import com.technods.rh.services.MessageService;
-import com.technods.rh.services.TasksService;
-import com.technods.rh.services.TicketService;
+import com.technods.rh.services.InterviewService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -20,85 +15,109 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by TECHNO on 26/04/2016.
  */
 
-
-
-
 @Controller
 public class CandidatController {
 
+	@Autowired
+	CandidatService candidatService;
 
-	@Autowired 
-	CandidatService candidatS;
+	@Autowired
+	InterviewService interviewService;
 
-    /**
-     *
-     * @param principal
-     * @param model
-     * @return
-     */
+	@Autowired
+	EmployeeService employeeService;
 
-    @RequestMapping(value = "candidat", method = RequestMethod.GET)
-    public String candidate(Principal principal, Map  model) {
-        if (principal == null) {
-            return "redirect:login?message=error1";
-        }
-        else{
-        String userName = principal.getName();
-       
-        return "candidat";
-    }
-        }
+	/**
+	 *
+	 * @param principal
+	 * @return
+	 */
 
-    /**
-     *
-     * @param name
-     * @param firstname
-     * @param cv
-     * @param photo
-     * @param post
-     * @param statut
-     * @param candidat
-     * @param principal
-     * @param result
-     * @return
-     */
+	@RequestMapping(value = "candidat", method = RequestMethod.GET)
+	public String candidate(Principal principal) {
+		if (principal == null) {
+			return "redirect:login?message=error1";
+		}
 
-    @RequestMapping(value = "/addCandidat", method = RequestMethod.POST)
-    public String addCandidat(@RequestParam("name") String
-                                             name,@RequestParam("firstName") String
-                                             firstname,@RequestParam("cv") String
-                                             cv,@RequestParam("photo") String
-                                             photo,@RequestParam("post") String
-                                             post,@RequestParam("statut") String
-                                             statut ,@ModelAttribute(
-                                "candidat") Candidat candidat,
-                                 Principal principal, BindingResult result)
-    {
-        if (result.hasErrors()) {
-            System.err.println(result);
-        }
-        if (principal == null) {
-            return "redirect:login?message=error1";
-        }
-        candidat.setName(name);
-        candidat.setName(cv);
-        candidat.setName(photo);
-        candidat.setName(post);
-        candidat.setName(statut);
-        candidat.setName(firstname);
-        
-        candidatS.addCandidat(candidat);
+		return "candidat";
 
-        return "redirect:candidat";
-    }
+	}
+
+	/**
+	 *
+	 * @param name
+	 * @param firstname
+	 * @param cv
+	 * @param photo
+	 * @param post
+	 * @param statut
+	 * @param candidat
+	 * @param principal
+	 * @param result
+	 * @param niveau
+	 * @param interviewDate
+	 * @param interview level
+	 * @return
+	 * @throws ParseException 
+	 */
+
+	@RequestMapping(value = "/addCandidat", method = RequestMethod.POST)
+	public String addCandidat(@RequestParam("name") String name,
+			@RequestParam("firstName") String firstname,
+			@RequestParam("cv") byte[] cvCandidat,
+			@RequestParam("photo") byte[] photo,
+			@RequestParam("post") String post,
+			@RequestParam("dateInterview") String dateInterview,
+			@RequestParam("timeInterview") String timeInterview,
+			@RequestParam("level") String level,
+			@RequestParam("mailEmployee") String mailEmployee,
+			@RequestParam("statut") String statut,
+			@RequestParam("niveau") String niveau,
+			@ModelAttribute("candidat") Candidat candidat, Principal principal,
+			BindingResult result) throws ParseException {
+		if (result.hasErrors()) {
+			System.err.println(result);
+		}
+		if (principal == null) {
+			return "redirect:login?message=error1";
+		}
+		
+		Interview interview = new Interview();
+		
+		candidat.setName(name);
+		candidat.setPhoto(photo);
+		candidat.setCv(cvCandidat);
+		candidat.setPoste(post);
+		candidat.setStatut(statut);
+		candidat.setFirstName(firstname);
+		candidat.setNiveau(niveau);
+
+		candidatService.addCandidat(candidat);
+
+		Employee employee = new Employee();
+		employee = employeeService.getEmployeeByMail(mailEmployee);
+		
+		SimpleDateFormat formatter = new SimpleDateFormat(
+				"yyyy-MM-dd HH:mm");
+		Date interviewDate = formatter.parse(dateInterview + " " + timeInterview);
+
+		interview.setDate(interviewDate);
+		interview.setLevel(level);
+		interview.setCandidat(candidat);
+		interview.setEmployee(employee);
+
+		interviewService.addInterview(interview);
+
+		return "redirect:candidat";
+	}
 
 }
