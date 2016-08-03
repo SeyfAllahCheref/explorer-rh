@@ -2,8 +2,8 @@ package com.technods.rh.entities;
 
 // Generated 11 avr. 2016 23:43:33 by Hibernate Tools 4.3.1
 
-import java.util.HashSet;
-import java.util.Set;
+//import java.util.HashSet;
+//import java.util.Set;
 import javax.persistence.*;
 
 /**
@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Candidat implements java.io.Serializable {
 
 	/**
-	 *
+	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private int idcandidat;
@@ -25,7 +25,6 @@ public class Candidat implements java.io.Serializable {
 	private String niveau;
 	private String poste;
 	private String statut;
-	private Interview interview;
 
 	public Candidat() {
 	}
@@ -35,8 +34,7 @@ public class Candidat implements java.io.Serializable {
 	}
 
 	public Candidat(int idcandidat, String name, String firstName, byte[] cv,
-					byte[] photo, String niveau, String poste, String statut,
-					Interview interview) {
+			byte[] photo, String niveau, String poste, String statut) {
 		this.idcandidat = idcandidat;
 		this.name = name;
 		this.firstName = firstName;
@@ -45,7 +43,6 @@ public class Candidat implements java.io.Serializable {
 		this.niveau = niveau;
 		this.poste = poste;
 		this.statut = statut;
-		this.interview = interview;
 	}
 
 	@Id
@@ -121,14 +118,5 @@ public class Candidat implements java.io.Serializable {
 		this.statut = statut;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "interview")
-	public Interview getInterview() {
-		return this.interview;
-	}
-
-	public void setInterview(Interview interview) {
-		this.interview = interview;
-	}
 
 }

@@ -1,6 +1,5 @@
 package com.technods.rh.services.impl;
 
-import com.technods.rh.entities.Employee;
 import com.technods.rh.entities.Candidat;
 import com.technods.rh.entities.repositories.CandidatRepository;
 import com.technods.rh.services.CandidatService;
